@@ -10,7 +10,6 @@ Create Table Professor
     phone_num CHAR(10),
     title VARCHAR(50),
     salary DECIMAL(7, 2),
-    -- figure out how to handle multiple degrees
     FOREIGN KEY (dept_num) REFERENCES Departments (dept_num)
 );
 
