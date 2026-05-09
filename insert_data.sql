@@ -5,49 +5,17 @@ INSERT INTO `course` (`course_num`, `title`, `textbook`, `units`, `dept_num`) VA
 (301, 'Database Systems', 'Database Design Concepts', 3, 10),
 (501, 'Calculus I', 'Calculus Early Transcendentals', 4, 20);
 
--- --------------------------------------------------------
 
---
--- Table structure for table `course_prereq`
---
-
-
-
---
--- Dumping data for table `course_prereq`
---
 
 INSERT INTO `course_prereq` (`course_num`, `prereq_course_num`) VALUES
 (201, 101),
 (301, 201);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `departments`
---
-
-
-
---
--- Dumping data for table `departments`
---
 
 INSERT INTO `departments` (`dept_num`, `phone_num`, `office_location`, `chair_ssn`) VALUES
 (10, '217-555-20', 301, '111-22-33'),
 (20, '217-555-20', 210, '222-33-44');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `enrollment records`
---
-
-
-
---
--- Dumping data for table `enrollment records`
---
 
 INSERT INTO `enrollment records` (`EnrollmentID`, `StudentID`, `CourseNumber`, `SectionNumber`, `Grade`) VALUES
 (1, 1001, 101, 1, 'A'),
@@ -71,17 +39,6 @@ INSERT INTO `enrollment records` (`EnrollmentID`, `StudentID`, `CourseNumber`, `
 (19, 1004, 301, 1, 'B+'),
 (20, 1002, 201, 1, 'A');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `minors`
---
-
-
-
---
--- Dumping data for table `minors`
---
 
 INSERT INTO `minors` (`MinorDepartmentNum`, `StudentID`) VALUES
 (20, 1001),
@@ -90,50 +47,16 @@ INSERT INTO `minors` (`MinorDepartmentNum`, `StudentID`) VALUES
 (20, 1006),
 (10, 1007);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `professor`
---
-
-
-
---
--- Dumping data for table `professor`
---
 
 INSERT INTO `professor` (`ssn`, `first_name`, `last_name`, `street`, `city`, `prof_state`, `zip_code`, `phone_num`, `title`, `salary`, `dept_num`) VALUES
 ('111-22-33', 'John', 'Carter', '12 Oak St', 'Springfield', 'IL', '62701', '217 555100', 'Professor', 95000.00, 10),
 ('222-33-44', 'Susan', 'Lee', '45 Maple Ave', 'Springfield', 'IL', '62702', '2175551002', 'Associate Professor', 87000.00, 20),
 ('333-44-55', 'Robert', 'Nguyen', '78 Pine Rd', 'Springfield', 'IL', '62703', '2175551003', 'Assistant Professor', 76000.00, 20);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `professor_degrees`
---
-
-
-
---
--- Dumping data for table `professor_degrees`
---
 
 INSERT INTO `professor_degrees` (`ssn`, `degree`) VALUES
 ('111-22-33', 'PhD Computer Science'),
 ('222-33-44', 'PhD Mathematics');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sections`
---
-
-
-
---
--- Dumping data for table `sections`
---
 
 INSERT INTO `sections` (`section_num`, `course_num`, `ssn`, `start_time`, `end_time`, `classroom`, `meet_days`, `seat_num`) VALUES
 (1, 101, '111-22-33', '09:00:00', '09:50:00', 101, 'MWF', 30),
@@ -143,17 +66,6 @@ INSERT INTO `sections` (`section_num`, `course_num`, `ssn`, `start_time`, `end_t
 (2, 101, '333-44-55', '11:00:00', '12:15:00', 102, 'TR', 30),
 (2, 501, '222-33-44', '09:30:00', '10:45:00', 111, 'TR', 35);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `student_record`
---
-
-
-
---
--- Dumping data for table `student_record`
---
 
 INSERT INTO `student_record` (`cwid`, `first_name`, `last_name`, `street`, `city`, `student_state`, `zip_code`, `phone_num`, `major_dept_num`) VALUES
 (1001, 'Emma', 'Johnson', '101 Birch St', 'Springfield', 'IL', '62704', '2175553001', 10),
@@ -164,12 +76,3 @@ INSERT INTO `student_record` (`cwid`, `first_name`, `last_name`, `street`, `city
 (1006, 'William', 'Wilson', '106 Birch St', 'Springfield', 'IL', '62704', '2175553006', 10),
 (1007, 'Sophia', 'Moore', '107 Birch St', 'Springfield', 'IL', '62704', '2175553007', 20),
 (1008, 'James', 'Taylor', '108 Birch St', 'Springfield', 'IL', '62704', '2175553008', 10);
-
---
--- Indexes for dumped tables
---
-
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
